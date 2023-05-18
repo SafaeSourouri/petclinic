@@ -34,6 +34,10 @@ public class PetClinicApplication {
 		SpringApplication.run(PetClinicApplication.class, args);
 		System.out.println("petclinic test ");
 		System.out.println("jenkins pipleines ");
+		System.out.println(" Pull  >  git ");
+		System.out.println(" Build  > maven");
+		System.out.println(" Test >  maven + junit ");
+		System.out.println(" publish > nexus");
 
 	}
 
