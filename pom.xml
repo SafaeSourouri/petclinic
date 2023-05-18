@@ -131,26 +131,26 @@
           </execution>
         </executions>
       </plugin>
-<!--      <plugin>-->
-<!--        <groupId>org.apache.maven.plugins</groupId>-->
-<!--        <artifactId>maven-enforcer-plugin</artifactId>-->
-<!--        <executions>-->
-<!--          <execution>-->
-<!--            <id>enforce-java</id>-->
-<!--            <goals>-->
-<!--              <goal>enforce</goal>-->
-<!--            </goals>-->
-<!--            <configuration>-->
-<!--              <rules>-->
-<!--                <requireJavaVersion>-->
-<!--                  <message>This build requires at least Java ${java.version}, update your JVM, and run the build again</message>-->
-<!--                  <version>${java.version}</version>-->
-<!--                </requireJavaVersion>-->
-<!--              </rules>-->
-<!--            </configuration>-->
-<!--          </execution>-->
-<!--        </executions>-->
-<!--      </plugin>-->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>enforce-java</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireJavaVersion>
+                  <message>This build requires at least Java ${java.version}, update your JVM, and run the build again</message>
+                  <version>${java.version}</version>
+                </requireJavaVersion>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
@@ -185,31 +185,31 @@
           </execution>
         </executions>
       </plugin>
-<!--      <plugin>-->
-<!--        <groupId>org.graalvm.buildtools</groupId>-->
-<!--        <artifactId>native-maven-plugin</artifactId>-->
-<!--      </plugin>-->
-<!--      <plugin>-->
-<!--        <groupId>org.springframework.boot</groupId>-->
-<!--        <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--        <executions>-->
-<!--          <execution>-->
-<!--            &lt;!&ndash; Spring Boot Actuator displays build-related information-->
-<!--              if a META-INF/build-info.properties file is present &ndash;&gt;-->
-<!--            <goals>-->
-<!--              <goal>build-info</goal>-->
-<!--            </goals>-->
-<!--            <configuration>-->
-<!--              <additionalProperties>-->
-<!--                <encoding.source>${project.build.sourceEncoding}</encoding.source>-->
-<!--                <encoding.reporting>${project.reporting.outputEncoding}</encoding.reporting>-->
-<!--                <java.source>${maven.compiler.source}</java.source>-->
-<!--                <java.target>${maven.compiler.target}</java.target>-->
-<!--              </additionalProperties>-->
-<!--            </configuration>-->
-<!--          </execution>-->
-<!--        </executions>-->
-<!--      </plugin>-->
+      <plugin>
+        <groupId>org.graalvm.buildtools</groupId>
+        <artifactId>native-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <!-- Spring Boot Actuator displays build-related information
+              if a META-INF/build-info.properties file is present -->
+            <goals>
+              <goal>build-info</goal>
+            </goals>
+            <configuration>
+              <additionalProperties>
+                <encoding.source>${project.build.sourceEncoding}</encoding.source>
+                <encoding.reporting>${project.reporting.outputEncoding}</encoding.reporting>
+                <java.source>${maven.compiler.source}</java.source>
+                <java.target>${maven.compiler.target}</java.target>
+              </additionalProperties>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
@@ -232,14 +232,14 @@
 
       <!-- Spring Boot Actuator displays build-related information if a git.properties
         file is present at the classpath -->
-<!--      <plugin>-->
-<!--        <groupId>io.github.git-commit-id</groupId>-->
-<!--        <artifactId>git-commit-id-maven-plugin</artifactId>-->
-<!--        <configuration>-->
-<!--          <failOnNoGitDirectory>false</failOnNoGitDirectory>-->
-<!--          <failOnUnableToExtractRepoInfo>false</failOnUnableToExtractRepoInfo>-->
-<!--        </configuration>-->
-<!--      </plugin>-->
+      <plugin>
+        <groupId>io.github.git-commit-id</groupId>
+        <artifactId>git-commit-id-maven-plugin</artifactId>
+        <configuration>
+          <failOnNoGitDirectory>false</failOnNoGitDirectory>
+          <failOnUnableToExtractRepoInfo>false</failOnUnableToExtractRepoInfo>
+        </configuration>
+      </plugin>
 
     </plugins>
   </build>
@@ -294,50 +294,50 @@
       <id>css</id>
       <build>
         <plugins>
-<!--          <plugin>-->
-<!--            <groupId>org.apache.maven.plugins</groupId>-->
-<!--            <artifactId>maven-dependency-plugin</artifactId>-->
-<!--            <executions>-->
-<!--              <execution>-->
-<!--                <id>unpack</id>-->
-<!--                <?m2e execute onConfiguration,onIncremental?>-->
-<!--                <phase>generate-resources</phase>-->
-<!--                <goals>-->
-<!--                  <goal>unpack</goal>-->
-<!--                </goals>-->
-<!--                <configuration>-->
-<!--                  <artifactItems>-->
-<!--                    <artifactItem>-->
-<!--                      <groupId>org.webjars.npm</groupId>-->
-<!--                      <artifactId>bootstrap</artifactId>-->
-<!--                      <version>${webjars-bootstrap.version}</version>-->
-<!--                    </artifactItem>-->
-<!--                  </artifactItems>-->
-<!--                  <outputDirectory>${project.build.directory}/webjars</outputDirectory>-->
-<!--                </configuration>-->
-<!--              </execution>-->
-<!--            </executions>-->
-<!--          </plugin>-->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>unpack</id>
+                <?m2e execute onConfiguration,onIncremental?>
+                <phase>generate-resources</phase>
+                <goals>
+                  <goal>unpack</goal>
+                </goals>
+                <configuration>
+                  <artifactItems>
+                    <artifactItem>
+                      <groupId>org.webjars.npm</groupId>
+                      <artifactId>bootstrap</artifactId>
+                      <version>${webjars-bootstrap.version}</version>
+                    </artifactItem>
+                  </artifactItems>
+                  <outputDirectory>${project.build.directory}/webjars</outputDirectory>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
 
-<!--          <plugin>-->
-<!--            <groupId>com.gitlab.haynes</groupId>-->
-<!--            <artifactId>libsass-maven-plugin</artifactId>-->
-<!--            <version>0.2.29</version>-->
-<!--            <executions>-->
-<!--              <execution>-->
-<!--                <phase>generate-resources</phase>-->
-<!--                <?m2e execute onConfiguration,onIncremental?>-->
-<!--                <goals>-->
-<!--                  <goal>compile</goal>-->
-<!--                </goals>-->
-<!--              </execution>-->
-<!--            </executions>-->
-<!--            <configuration>-->
-<!--              <inputPath>${basedir}/src/main/scss/</inputPath>-->
-<!--              <outputPath>${basedir}/src/main/resources/static/resources/css/</outputPath>-->
-<!--              <includePath>${project.build.directory}/webjars/META-INF/resources/webjars/bootstrap/${webjars-bootstrap.version}/scss/</includePath>-->
-<!--            </configuration>-->
-<!--          </plugin>-->
+          <plugin>
+            <groupId>com.gitlab.haynes</groupId>
+            <artifactId>libsass-maven-plugin</artifactId>
+            <version>0.2.29</version>
+            <executions>
+              <execution>
+                <phase>generate-resources</phase>
+                <?m2e execute onConfiguration,onIncremental?>
+                <goals>
+                  <goal>compile</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <inputPath>${basedir}/src/main/scss/</inputPath>
+              <outputPath>${basedir}/src/main/resources/static/resources/css/</outputPath>
+              <includePath>${project.build.directory}/webjars/META-INF/resources/webjars/bootstrap/${webjars-bootstrap.version}/scss/</includePath>
+            </configuration>
+          </plugin>
         </plugins>
       </build>
     </profile>
