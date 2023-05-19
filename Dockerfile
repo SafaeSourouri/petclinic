@@ -1,4 +1,4 @@
-#ENTRYPOINT ["java" , "-jar" ,"/dev-integration.jar"]
+#ENTRYPOINT ["java" , "-jar" ,"/spring-petclinic-main.jar"]
 
 
 FROM openjdk:17

@@ -2,6 +2,8 @@ pipeline{
   agent any
   tools {
     maven 'maven-3.6.3'
+       jdk 'jdk17'
+
     }
 
     stages{
@@ -18,6 +20,12 @@ pipeline{
                 sh 'mvn clean install '
             }
         }
+          stage('build'){
+                    steps{
+                        echo " ********************* Build *************************** "
+                        sh 'mvn compile '
+                    }
+                }
         stage('test'){
             steps{
                 echo "********************* Test ***************************"
