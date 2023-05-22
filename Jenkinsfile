@@ -14,12 +14,12 @@ pipeline{
             git branch: 'main', credentialsId: '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', url: 'https://github.com/SafaeSourouri/petclinic.git'
             }
         }
-       stage('build'){
+     /*  stage('build'){
             steps{
                 echo " ********************* Build *************************** "
                 sh 'mvn clean install '
             }
-        }
+        }*/
           stage('build'){
                     steps{
                         echo " ********************* Build *************************** "
