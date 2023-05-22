@@ -2,7 +2,7 @@ pipeline{
   agent any
   tools {
     maven 'maven-3.6.3'
-       jdk 'jdk17'
+    /*   jdk 'jdk17'*/
 
     }
 
@@ -22,7 +22,7 @@ pipeline{
         }*/
           stage('build'){
                     steps{
-                        echo " ********************* Build *************************** "
+                        echo " ********************* Buildd *************************** "
                         sh 'mvn compile '
                     }
                 }
