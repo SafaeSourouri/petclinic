@@ -36,7 +36,7 @@ public class PetClinicApplication {
 		System.out.println("jenkins pipleines ");
 		System.out.println(" Pull  >  git ");
 		System.out.println(" Build  > maven");
-		System.out.println(" Test >  maven + junit ");
+		System.out.println(" Test >  junit ");
 		System.out.println(" build image  ");
 
 	}
