@@ -37,7 +37,7 @@ public class PetClinicApplication {
 		System.out.println(" Pull  >  git ");
 		System.out.println(" Build  > maven");
 		System.out.println(" Test >  maven + junit ");
-		System.out.println(" publish > nexus");
+		System.out.println(" build image  ");
 
 	}
 
