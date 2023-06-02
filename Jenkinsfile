@@ -43,6 +43,20 @@ pipeline{
                 sh 'mvn package'
             }
        }
+
+        stages{
+                   stage('docker ssh'){
+
+
+                       steps{
+                           sh  "ssh root@172.17.0.1 'docker build -t spring-petclinic-main .'"
+
+
+
+                       }
+
+                   }
+               }
 //   stage('Publish to Nexus Repository Manager') {
 //             steps {
 //                 echo "********************* Publish ***************************"
