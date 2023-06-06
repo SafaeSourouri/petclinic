@@ -1,4 +1,9 @@
 
+FROM scratch
+RUN apt-get update
+CMD ["echo" , "my dockerfile "]
+
+
 #FROM openjdk:17
 #WORKDIR ./app
 #ARG JAR_FILE=target/*.jar
