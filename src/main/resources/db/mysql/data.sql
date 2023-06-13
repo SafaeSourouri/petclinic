@@ -37,6 +37,8 @@ INSERT IGNORE INTO owners VALUES (12, 'safae', 'safae', '2335 Independence La.',
 INSERT IGNORE INTO owners VALUES (13, 'zineb', 'zineb', '2335 Independence La.', 'Waunakee', '6085555487');
 
 INSERT IGNORE INTO owners VALUES (14, 'btissam', 'btissam', '2335 Independence La.', 'Waunakee', '6085555487');
+INSERT IGNORE INTO owners VALUES (15, 'aicha', 'aicha', '2335 Independence La.', 'Waunakee', '999685626666');
+INSERT IGNORE INTO owners VALUES (16, 'roukia', 'roukia', '2335 Independence La.', 'Waunakee', '999685626666');
 
 INSERT IGNORE INTO pets VALUES (1, 'Leo', '2000-09-07', 1, 1);
 INSERT IGNORE INTO pets VALUES (2, 'Basil', '2002-08-06', 6, 2);
