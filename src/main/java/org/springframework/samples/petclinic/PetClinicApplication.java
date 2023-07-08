@@ -38,6 +38,8 @@ public class PetClinicApplication {
 		System.out.println(" Build  > maven");
 		System.out.println(" Test >  junit ");
 		System.out.println("build -> image");
+		System.out.println("build -> image");
+
 
 	}
 
